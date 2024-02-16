@@ -1,0 +1,23 @@
+Objective: for customers who purchased product A, recommend another product to them
+
+Methods: First apply clustering based on features of products (e.g. color, brand). Then for items in the same cluster with product A, use MBA based on transaction data to calculate the associations. Recommend the product which has the highest association with product A.
+
+Use K-prototype or k-modes clustering. K-modes clustering measures similarity using categorical dissimilarity measures like Hamming distance. K-prototype combines k-means for numerical data and k-modes for categorical data. Need preprocessing with one-hot encoding or label encoding first. 
+Features of product may include: 
+Style (51 MERU08, 9 126NAO) 
+Color (BLACK, KHAKI) (into different color groups)
+Size (L) (to numeric)
+Brand (TOMMY HI, MARK ECK) (problem: too many values)
+Department (CLINIQUE, LESLIE)
+Whether discount (sell price - original price <0? before/recently)
+Most bought in which season/month (from transaction data)
+City/state of the store (one-to-many relationship) 
+Return rate (from transact)
+MBA with Apriori Algorithm. The Apriori algorithm works based on the principle of association rule mining, where it seeks to find relationships between items in a transaction dataset. The algorithm uses support, confidence, and lift as key metrics to identify significant associations. It returns the association between two products.
+
+ROI: Suppose 20% of customers choose to purchase the recommended product after viewing the recommendation. Calculate the resulting profit.
+
+Pros: 
+The method makes use of both transaction data and item features data
+Compared with using MBA directly, employing clustering first allows us to reduce computational efforts. Instead of calculating associations with all products in the dataset, we only need to focus on the products within the same cluster 
+Compared with using MBA directly, utilizing clustering leads to more accurate recommendations. For instance, some adults may buy clothes along with their children, creating potentially confusing associations

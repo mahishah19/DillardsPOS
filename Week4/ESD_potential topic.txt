@@ -1,0 +1,11 @@
+﻿1. Recommendation system:
+Give a recommendation of another item B after purchasing item A
+* Similarity Analysis: Utilize the SKUinfo dataset to identify the item in the catalog with the highest similarity to item A, based on shared features.
+* Purchase History Analysis: Leverage transaction history to recommend items that have been frequently purchased alongside item A by previous customers, suggesting complementary or frequently paired products.
+
+
+2. Optimized Stocking Strategies
+How effectively are the stores’ inventory levels being managed in relation to sales performance, and what specific strategies can be implemented to optimize inventory turnover rates while ensuring customer satisfaction
+* SKU Specific Analysis: With features in SKUinfo and Transact dataset, find which SKUs are consistently high performers in terms of sales across different stores.
+* Regional Sales Performance: With regional info, analyze whether certain stores (based on CITY and STATE) are more successful in selling specific SKUs.
+* Inventory Turnover: Based on saletime, calculate the inventory turnover rates for various SKUs to understand how quickly inventory is being sold and replaced.
